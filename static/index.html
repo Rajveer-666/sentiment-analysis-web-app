@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sentiment Analysis</h1>
+            <p class="subtitle">Enter your text and get instant sentiment prediction</p>
+        </header>
+        <div class="input-section">
+            <textarea id="inputText" placeholder="Type or paste your text here..."></textarea>
+            <button id="analyzeBtn" onclick="analyzeSentiment()">Analyze Sentiment</button>
+        </div>
+        <div id="result" class="result-section">
+            <div class="result-content hidden" id="resultContent">
+                <h2>Prediction Result</h2>
+                <div class="sentiment-badge" id="sentimentBadge"></div>
+                <p id="confidenceText"></p>
+                <p id="fullText"></p>
+            </div>
+            <div class="loading hidden" id="loading">
+                <div class="spinner"></div>
+                <p>Analyzing your text...</p>
+            </div>
+            <div class="placeholder" id="placeholder">
+                <p>Your sentiment analysis results will appear here</p>
+            </div>
+        </div>
+        <footer>
+            <p>Powered by Machine Learning & FastAPI</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
